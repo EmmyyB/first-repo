@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click on next</title>
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="title">
+                <h2>Our Reviews</h2>
+                <div class="underline"></div>
+            </div>
+
+            <article class="review">
+                <div class="img-container">
+                    <img src="" id="person-img" alt="">
+                </div>
+
+                <h4 id="author"></h4>
+                <p id="job"></p>
+                <p id="info"></p>
+
+                <div class="button-container"></div>
+                <button class="prev-btn"><i> &lt; </i></button>
+
+                <button class="next-btn"><i> &gt; </i></button>
+            </article>
+        </section>
+    </main>
+    <script>
+        const reviews = [
+        {
+            id: 0,
+            name: "Barbie",
+            job: "Web design",
+            img: "./Images/white.jpg",
+            text: "To make your document look professionally produced, word provides header, footer cover page, and text box designs that complement each other. For example, you can add a matching cover page, header and the elements you want from the different galleries."
+        },
+
+        {
+            id: 1,
+            name: "Emmanuel",
+            job: "Web design",
+            img: "./Images/white.jpg",
+            text: "To make your document look professionally produced, word provides header, footer cover page, and text box designs that complement each other. For example, you can add a matching cover page, header and the elements you want from the different galleries."
+        },
+
+        {
+            id: 2,
+            name: "Isaac",
+            job: "Web design",
+            img: "./Images/white.jpg",
+            text: "To make your document look professionally produced, word provides header, footer cover page, and text box designs that complement each other. For example, you can add a matching cover page, header and the elements you want from the different galleries."
+        },
+
+        {
+            id: 3,
+            name: "Obinna",
+            job: "Web design",
+            img: "./Images/white.jpg",
+            text: "To make your document look professionally produced, word provides header, footer cover page, and text box designs that complement each other. For example, you can add a matching cover page, header and the elements you want from the different galleries."
+        }
+        ]
+        
+        //SELECT ITEMS
+        const imgs = document.getElementById("person-img")
+        const author = document.getElementById("author")
+        const job = document.getElementById("job")
+        const info = document.getElementById("info")
+
+        const preBtn = document.querySelector('.prev-btn')
+        const nextBtn = document.querySelector('.next-btn')
+        //const randomBtn = document.querySelector('random-btn')
+
+        //set starting item
+        var currentItem = 0;
+
+        //load initial item
+
+        //load vs DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', ()=> {
+            
+            showPerson()
+        })
+        //show person based on item
+        function showPerson () {
+            const item = reviews[currentItem];
+
+            imgs.src = item.img;
+            author.textContent = item.name;
+            job.textContent = item.job;
+            info.textContent = item.text
+        }
+
+        //show next person
+        nextBtn.addEventListener("click", function(){
+            currentItem++;
+
+            if(currentItem > reviews.length) {
+                currentItem = 0
+            }
+           
+            showPerson()
+        });
+
+        //show next previous
+        preBtn.addEventListener("click", function(){
+            currentItem--;
+
+            if(currentItem < 0) {
+                currentItem = reviews.length - 1
+            }
+          
+            showPerson()
+        })
+    </script>
+</body>
+</html>

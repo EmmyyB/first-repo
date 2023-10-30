@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <article class="shape_container">
+        <div id="shapes"></div>
+        <h3 id="shape_name"></h3>
+    </article>
+
+    <button class="prev-btn">Previous</button>
+    <button class="next-btn">Next</button>
+
+    <script>
+        const canvas = document.getElementById('canvas')
+
+        //An array to store the drawing functions for each shape
+        const shapeDrawingFunctions = [
+        drawRectangle,
+        drawLine,
+        drawTriangle,
+        drawCircle,
+        drawTrapezium]
+
+        let currentShapeIndex = 0
+
+        //Initial drawing
+        shapeDrawingFunctions[currentShapeIndex]()
+
+        //Function to draw a rectangle
+        function drawRectangle() {
+            const context = canvas.getContext('2d')
+            context.clearRect(0, 0, canvas.width, canvas.height)
+            context.fillStyle = 'pink'
+            context.fillRect(0, 0, 400, 100)
+        }
+
+        //Function to draw a line
+        function drawLine() {
+            const context = canvas.getContext('2d')
+            context.clearRect(0, 0, canvas.width, canvas.height)
+            context.beginPath()
+            context.moveTo(70, 30)
+            context.lineTo(100, 100)
+            context.strokeStyle = 'red'
+            context.stroke()
+        }
+
+        //Function to draw a triangle
+        function drawTriangle() {
+            const context = canvas.getContext('2d')
+            context.clearRect(0, 0, canvas.width, canvas.height)
+            context.beginPath()
+            context.moveTo(20, 100)
+            context.lineTo(100, 20)
+            context.lineTo(176, 100)
+            context.lineTo(20, 100)
+            context.strokeStyle = 'red'
+            context.fillStyle = 'blue'
+            context.fill()
+            context.stroke()
+        }
+
+        //Function to draw a circle
+        function drawCircle() {
+            const context = canvas.getContext('2d')
+            context.clearRect(0, 0, canvas.width, canvas.height)
+            context.beginPath()
+            context.arc(95, 70, 50, 0, 2 * Math.PI)
+            context.fillStyle = 'yellow'
+            context.strokeStyle = 'green'
+            context.fill()
+            context.stroke()
+        }
+
+        //Function to draw a trapezium
+        function drawTrapezium() {
+            const context = canvas.getContext('2d')
+            context.clearRect(0, 0, canvas.width, canvas.height)
+            context.beginPath()
+            context.moveTo(20, 20)
+            context.lineTo(100, 20)
+            context.lineTo(175, 100)
+            context.lineTo(20, 100)
+            context.lineTo(20, 20)
+            context.strokeStyle = 'gold'
+            context.fillStyle = 'indigo'
+            context.fill()
+            context.stroke()
+        }
+
+        const prevBtn = document.querySelector('.prev-btn')
+        const nextBtn = document.querySelector('.next-btn')
+
+        nextBtn.addEventListener("click", function () {
+            currentShapeIndex = (currentShapeIndex + 1) % shapeDrawingFunctions.length
+            shapeDrawingFunctions[currentShapeIndex]()
+        })
+
+        prevBtn.addEventListener("click", function () {
+            currentShapeIndex = (currentShapeIndex -1 + shapeDrawingFunctions.lenght) % shapeDrawingFunctions.lenght
+            shapeDrawingFunctions[currentShapeIndex]()
+        })
+    </script>
+</body>
+</html>

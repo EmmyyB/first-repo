@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button id="open" onclick="open()">OPEN</button> -->
+    <input type="button" value="Open" id="open">
+    <input type="button" value="Close" id="close">
+    <script>
+        const opened = document.querySelector('#open')
+        const closed = document.querySelector('#close')
+
+        opened.addEventListener('click', ()=> {
+           window.open("Show&Hide.html", "height=200, width=200", false)  
+        })
+        closed.addEventListener('click', ()=> {
+            window.close()
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+			JAVASCRIPT
+
+javascript is a dynamic programming language use for both client side and server side.
+for client side we use script
+for server side we use server
+
+		uses of javascript
+
+1, web development
+2, game building
+3, exam questions
+
+		steps in writing a good program
+
+1, know how to declare variable.  a variable is a container that holds value.
+2, assign value(s). an array have to do with multiple value.
+3, perform calculations
+4, display result/ output
+5, handle errors   types of error handling(default error, customer error handling)
+
+		how to display result
+document.write()	this is now old, we dont use it now
+console.log()          this is mainly used for testing your program
+inner HTML
+innerText
+textcontent
+			
+			types of variable
+1, global variable are variables that can be used within and outside the building block
+2, local variables are those variable that can be used only within the building block.
+
+		declaring a variable
+
+const  - this is a global variable and a constant variable cant be altered
+var	-- this is also a global variable
+let	- this is a local variable
+
+		datatypes
+
+it defines the type of data a variable holds
+1, integers (whole number)
+2, string text. it works with 'or"
+3, boolean  it has to do with True or False  0=false 1=true   note booleans must be in small letter
+4, null empty
+5, float for decimal
+
+we use (typeof()) to know the datatype of a data
+eg typeof("3")
+
+-- note javascript is case sensitve
+
+		NAMING CONVENTION	
+it is the standard way of providing a name for your variables
+1, you must not start with numbers
+2, you can only start with underscore(_) and $ sign special character no other special character..
+3, you cant use built in methods or reserved words for a variable name
+
+		ARITHEMETIC OPERATIONS
+addition
+division
+subtraction
+multiplication
+modulus		THIS RETURNS A REMEMDER AS A RESULT.. if the first number is smaller that the second number then the modulus is the first number 2%5 =2
+exponetial ** 
+
+		if statement 
+it returns true if a result is correct and false if the condition is wrong.
+it works with two or more values
+
+if = 
+else = 
+
+		Comparison
+>
+<
+>=
+<=
+!= OR <>
+= normal equal
+== equality
+=== stictly equal to, its used to test 
+
+ Monday 17th july 2023       LIST
+
+list is an ordered and changeable collection of data object, and list is where we can store multiple values.
+
+
+                             LOOP
+ 			Type of loops
+While loop
+Due while loop
+For loop
+
+			FOR LOOP
+` is called back tick
+
+
+
+
+
+

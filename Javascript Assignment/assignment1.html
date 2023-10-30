@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="shift">
+        <form action="">
+            <label>Email</label>
+            <input type="Email">
+            <br><br>
+
+            <label>Password</label>
+            <input type="Password" id="pwd">
+
+            <input type="checkbox" id="check">
+            <strong>Show Password</strong>
+        </form>
+    </div>
+    
+    <br><br>
+
+    <button onclick="submitWin()">Submit</button>
+    <!-- <input type="Submit" onclick="checkWin()"> -->
+    <br><br>
+    <div id="msg"></div>
+
+    <script>
+        const check = document.querySelector('#check')
+
+        check.addEventListener('click', ()=> {
+            let pass = document.getElementById("pwd")
+            if (pass.type === "Password") {
+                console.log(pass) 
+                pass.type = "text"
+            }
+            else {
+                pass.type == 'Password'
+            }
+        })
+
+        var myWindow;
+        function submitWin() {
+            myWindow = window.open("assignpage.html", "Info", "height=500, width=500, top=500")
+        }
+        function checkmail() {}
+    </script>
+</body>
+</html>

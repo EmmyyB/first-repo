@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {/*The CSS :root pseudo-class selector is used to select the highest-level parent of a given specification.
+In the HTML specification, the :root is essentially equivalent to the html selector.*/
+    --primary-color: #87ceeb;
+    --text-color: #727171;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+/*Common Styles*/
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.description {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color)
+}
+
+/* layouts */
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid; /*Defines the element as a grid container and establishes a new grid formatting context for its contents*/
+    padding: 5rem;
+    background: #070707;
+    grid-template-columns: 1fr 1fr; /*creates 2 columns*/
+    gap: 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 7rem;
+    }
+}
+
+.profile {
+    grid-column: 1 / -1;/*makes the profile take only one column*/
+    margin-bottom: 2rem;
+}
+
+/* Profile */
+.profile_cont {
+    display: flex; /*By using display flex in parent element, child element automatically align like column or row with auto width and auto height.*/
+    gap: 2rem;
+}
+
+.mypic {
+    max-width: 250px;
+}
+
+.Firstname {
+    color: white;
+    font-weight: 200;
+    font-size: clamp(2rem, 8vw, 4rem);/* The clamp() CSS function clamps a middle value within a range of values between a defined minimum bound and a maximum bound*/
+    text-transform: uppercase;
+    display: block;/*A block-level element always starts on an new line and takes up the full width available (stretches out to the left and right as far as it can).*/
+    margin-bottom: -0.8rem;/*Takes the next row a little bit upper*/
+}
+
+.Lastname {
+    color: var(--primary-color);/*The var() CSS function can be used to insert the value of a custom property (sometimes called a "CSS variable") instead of any part of a value of anothe property.*/
+    font-weight: 700;
+    font-size: clamp(2.5rem, 15vw, 7rem);
+    text-transform: uppercase;
+    display: block;
+}
+
+.profiletits {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.downloadbtn {
+    display: block;
+    text-decoration: underline;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.downloadbtn:hover {
+    color: var(--primary-color);
+}
+

@@ -1,0 +1,209 @@
+.div1 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 4s;
+  }
+  
+.div1:hover {
+    width: 300px;
+  }
+
+  .div2 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s, height 4s;
+  }
+  
+  .div2:hover {
+    width: 400px;
+    height: 300px;
+  }
+
+  .time {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 25s;
+  }
+  
+  #div3 {transition-timing-function: linear;}
+  #div4 {transition-timing-function: ease;}
+  #div5 {transition-timing-function: ease-in;}
+  #div6 {transition-timing-function: ease-out;}
+  #div7 {transition-timing-function: ease-in-out;}
+  
+  .time:hover {
+    width: 300px;
+  }
+
+  .div8 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 3s;
+    transition-delay: 5s;
+  }
+  
+  .div8:hover {
+    width: 300px;
+  }
+P{
+  font-size: 50px;
+}
+  .div9 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s, height 2s, transform 2s;
+  }
+  
+  .div9:hover {
+    width: 300px;
+    height: 300px;
+    transform: rotate(180deg);
+  }
+
+  .div10 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 3s;
+  }
+  
+  .div10:hover {
+    width: 300px;
+  }
+
+  .div11 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s linear 1s;
+  }
+  
+  .div11:hover {
+    width: 300px;
+  }
+
+  .diw {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  
+  @keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+
+  .dix {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example1;
+    animation-duration: 4s;
+  }
+  
+  @keyframes example1 {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+
+  .dip {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example2;
+    animation-duration: 4s;
+  }
+  
+  @keyframes example2 {
+    0%   {background-color:red; right:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  .dim {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example3;
+    animation-duration: 4s;
+    animation-delay: -2s;
+  }
+  
+  @keyframes example3 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  .dii {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example4;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+  }
+  
+  @keyframes example4 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  .dig {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example5;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes example5 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  .dibc {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example6;
+    animation-duration: 4s;
+    animation-direction: alternate;  
+    /*change the animation direction*/
+  }
+  
+  @keyframes example6 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }

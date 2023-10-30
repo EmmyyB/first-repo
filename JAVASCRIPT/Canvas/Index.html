@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <!-- Canvas is an element in html that provides drawing surface on which you can render graphics, animetions and interactive content  -->
+
+    <canvas id="canvas" width="400" height="100"></canvas>
+    <input type="submit" value="submit" id="clear">
+
+    <script>
+        /*
+        const canvas = document.getElementById('canvas')
+        const content = canvas.getContext('2d')
+        content.fillStyle = "Red "
+        content.fillRect(50, 50, 100, 100)
+        */
+
+        //Clearing the canvas
+        /*
+        const canvas = document.getElementById('canvas')
+        const btn = document.getElementById('clear')
+        const content = canvas.getContext('2d')
+        btn.addEventListener('click', ()=>{
+            //content.clearRect(0, 0, canvas.width, canvas.height) This will clear all the element in the canvas
+            content.clearRect(50, 50, 100, 100) // This will clear the particular element you specified in the canvas
+        })
+        //content.clearRect(0,0, canvas.width, canvas.height)
+        content.fillStyle = "Red "
+        content.fillRect(0, 0, 400, 100)
+        */
+
+        //Drawing a line in a canvas
+        //const canvas = document.getElementById('canvas')
+        //const btn = document.getElementById('clear')
+        const content = canvas.getContext('2d')
+        content.beginPath()
+        content.moveTo(30, 30) //starting point
+        content.lineTo(200, 100)
+        //content.fillStyle = "Red"
+        content.stroke()
+        btn.addEventListener('click', ()=>{
+            //content.clearRect(0, 0, canvas.width, canvas.height)
+        })
+        content.fillRect(50, 50, 100, 100)
+    </script>
+</body>
+</html>

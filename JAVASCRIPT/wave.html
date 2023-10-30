@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="wave" width="400" height="500"></canvas>
+    <script>
+        const wave = document.querySelector('#wave')
+        const draw = wave.getContext('2d')
+        const waveProps = {
+            amplitude: 90,
+            frequency: 0.02,
+            speed: 0.1,
+            yOffset: wave.height/2
+        }
+
+        function animate() {
+            requestAnimationFrame(animate)
+            draw.clearRect(0, 0, wave.width, wave.height)
+
+            draw.beginPath()
+            for(var i = 0; i < wave.width; i += 5) {
+                const j = waveProps.yOffset +
+                Math.sin(i * waveProps.frequency + waveProps.speed) * waveProps.amplitude;
+                draw.lineTo(i,j)
+                draw.stroke()
+            }
+            
+        }
+        animate()
+    </script>
+</body>
+</html>

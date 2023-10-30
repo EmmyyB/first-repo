@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+<body>
+    <!-- Drawing a moving circle -->
+
+    <canvas id="circle" width="400" height="400"></canvas>
+
+    <script>
+        const circle = document.querySelector('#circle')
+        const draw = circle.getContext('2d')
+
+        let x = 50
+        let y = 50
+        let dx = 2
+        let dy = 6
+        const radius = 20
+
+        const animate = function() {
+            requestAnimationFrame(animate)
+            draw.clearRect(0, 0, circle.width, circle.height)
+
+            //Draw a circle
+            draw.beginPath()
+            draw.arc(x, y, radius, 0, 2*Math.PI)
+            draw.fillStyle = "#3cc"
+            draw.fill()
+            draw.closePath()
+
+            //Update circle Position
+            x += dx
+            y += dy
+
+            //Bounce off the wall
+            if(x + radius > circle.width || x - radius < 0) {
+                dx = -dx
+            } 
+            if(y + radius > circle.height || y - radiusb < 0) {
+                dy = -dy
+            }
+        }
+        animate()
+    </script>
+</body>
+</html>

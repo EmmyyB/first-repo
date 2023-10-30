@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <input type="text" class="first" placeholder="Enter first name">
+    <input type="text" class="second" placeholder="Enter last name">
+    <input type="submit" value="Add" onclick="addition()">
+    <input type="submit" value="subtract" onclick="substraction()">
+    <input type="submit" value="multiply" onclick="multiplication()">
+    <input type="submit" value="divide" onclick="division()">
+
+    <script>
+        const first = document.querySelector('.first')
+        const second = document.querySelector('.second')
+
+        function addition() {
+            alert(+(first.value) + +(second.value))
+            first.value = ''
+            second.value = ''
+        }
+
+        function substraction() {
+            alert(+(first.value) - +(second.value))
+            first.value = ''
+            second.value = ''
+        }
+
+        function multiplication() {
+            alert(+(first.value) * +(second.value))
+            first.value = ''
+            second.value = ''
+        }
+
+        function division() {
+            alert(+(first.value) / +(second.value))
+            first.value = ''
+            second.value = ''
+        }
+    </script>
+</body>
+</html>

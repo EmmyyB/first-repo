@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <script>
+        const score = prompt("Enter the score here")
+
+        if((score >= 70) && (score <= 100)){
+            document.write("A")
+        }
+        else if((score >=60) && (score <= 69)){
+            document.write("B")
+        }
+        else if((score >= 50) && (score <= 59)){
+            document.write("C")
+        }
+        else if((score >= 30) && (score <= 40)){
+            document.write("D")
+        }
+        else if((score >= 0) && (score <= 29)){
+            document.write("F")
+        }
+        else {
+            document.write("Out of range")
+        }
+    </script>
+</body>
+</html>

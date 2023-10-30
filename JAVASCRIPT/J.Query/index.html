@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p id="show"></p>
+    <button id="display">Display</button>
+    <form id="records"> <br>
+        <input type="text" id="name" name="name" placeholder="Enter your name"> <br><br>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea><br>
+        <label for="">Gender</label>
+        <input type="radio" name="gender" value="male" id="">male
+        <input type="radio" name="gender" value="female" id="">female <br>
+        
+        <label for="">Hobbies</label>
+        <input type="checkbox" name="hobby" value="dancing" id="">Dancing 
+        <input type="checkbox" name="hobby" value="singing" id="">Singing
+        <input type="checkbox" name="hobby" value="reading" id="">Reading
+        <input type="checkbox" name="hobby" value="drawing" id="">Drawing 
+        <input type="checkbox" name="hobby" value="gaming" id="">Gaming
+        <input type="checkbox" name="hobby" value="swimming" id="">Swimming <br>
+        <select name="cars" id="cars"> 
+            <option value=""></option>
+            <option value="Benz">Benz</option>
+            <option value="Lexus">Lexus</option>
+            <option value="Rolls Royce">Rolls Royce</option>
+            <option value="Bugatti">Bugatti</option>
+            <option value="Toyota">Toyota</option> 
+        </select>
+        <button type="submit">View</button>
+    </form>
+    <script>
+        //jquery is a javascript libary that simplifies
+        $(document).ready(function() {
+            $("#show").text("Welcome to jquery class")
+        }) 
+
+        $(document).ready(function() {
+            $("#display").click(function() {
+                alert("We are ready for today")
+            })
+        })
+
+        $(document).ready(function() {
+            $("#records").submit(function(e) {
+                e.preventDefault()
+                var user = $("#name").val()
+                var msg = $("#message").val()
+               // alert(user + ' ' + msg)
+            })
+        })
+
+        $(document).ready(function() {
+            $("input[name='gender']").change(function() {
+                var selectGender = $("input[name='gender']:checked").val()
+               // alert(selectGender)
+            })
+        })
+        
+        $(document).ready(function() {
+            $("input[name='hobby']").change(function() {
+                var hobbies = []
+                $("input[name='hobby']:checked").each(function() {
+                    hobbies.push($(this).val())
+                })
+               // alert(hobbies.join(" ,"))
+            })
+        })
+
+        $(document).ready(function() {
+            $("#cars").change(function() {
+                var selectCar = $(this).val()
+               // alert(selectCar)
+            })
+        })
+        /*
+        $(document).ready(function() {
+            $("#records").submit(function(event) {
+                event.preventDefault()
+                var profile = $("#name").val()
+                var doc = $("#message").val()
+                var ride = $("#cars").val()
+                var gen = $("input[name='gender']:checked").val()
+                var hob = []
+                $("input[name='hobby']:checked").each(function() {
+                    hob.push($(this).val())
+                })
+                alert(profile + ' ' + doc + ' ' + ride + ' ' + gen + ' ' + hob.join(" ,"))
+            })
+        })
+        */
+        $(document).ready(function() {
+            $("#records").submit(function(event) {
+                event.preventDefault()
+                var profile = $("#name").val()
+                var doc = $("#message").val()
+                var ride = $("#cars").val()
+                var gen = $("input[name='gender']:checked").val()
+                var hob = []
+                $("input[name='hobby']:checked").map(function() {
+                    return($(this).val())
+                }).get()
+                alert(profile + ' ' + doc + ' ' + ride + ' ' + gen + ' ' + hob.join())
+            })
+        })
+
+        
+    </script>
+         
+</body>
+</html>

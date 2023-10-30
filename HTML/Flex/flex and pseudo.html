@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="flex and pseudo .css">
+</head>
+<body>
+    <h1>Create a Flex Container</h1>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p>A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
+    
+    <p>Direct child elements(s) of the flexible container automatically becomes flexible items.</p>
+
+
+    <h1>The flex-direction Property</h1>
+    
+    <p>The "flex-direction: column;" stacks the flex items vertically (from top to bottom):</p>
+    
+    <div class="flex-container1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>  
+    </div>
+
+    <h1>The flex-direction Property</h1>
+    
+    <p>The "flex-direction: row;" stacks the flex items horizontally (from left to right):</p>
+    
+    <div class="flex-container2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>  
+    </div>
+
+    <h1>The flex-wrap Property</h1>
+    
+    <p>The "flex-wrap: wrap;" specifies that the flex items will wrap if necessary:</p>
+    
+    <div class="flex-container3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>  
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>  
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>  
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>  
+    </div>
+    
+    <p>Try resizing the browser window.</p>
+
+    <h1>The justify-content Property</h1>
+
+    <p>The "justify-content: center;" aligns the flex items at the center of the container:</p>
+
+    <div class="flex-container4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>  
+    </div>
+
+    
+    <h1>The align-items Property</h1>
+
+    <p>The "align-items: center;" aligns the flex items in the middle of the container:</p>
+
+    <div class="flex-container5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>  
+    </div>
+
+    <h1>The align-items Property</h1>
+
+    <p>The "align-items: stretch;" stretches the flex items to fill the container (this is default):</p>
+    
+    <div class="flex-container6">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>  
+    </div>
+
+    <h1>The align-items Property</h1>
+
+    <p>The "align-items: baseline;" aligns the flex items such as their baselines aligns:</p>
+
+    <div class="flex-container7">
+        <div><h1>1</h1></div>
+        <div><h6>2</h6></div>
+        <div><h3>3</h3></div>  
+        <div><small>4</small></div>  
+    </div>
+
+    
+    <h1>The align-content Property</h1>
+
+    <p>The "align-content: space-between;" displays the flex lines with equal space between them:</p>
+
+    <div class="flex-container8">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>  
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>  
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>  
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>  
+    </div>
+
+    <h1>Perfect Centering</h1>
+
+    <p>A flex container with both the justify-content and the align-items properties set to <em>center</em> will align the item(s) in the center (in both axis).</p>
+
+    <div class="flex-container9">
+        <div></div>
+    </div>
+
+    
+    <h1>Flexible Items</h1>
+
+    <div class="flex-container10">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div> 
+        <div>4</div>
+    </div>
+
+    <p>All direct children of a flexible container becomes flexible items.</p>
+
+    
+    <h1>The order Property</h1>
+
+    <p>Use the order property to sort the flex items as you like:</p>
+
+    <div class="flex-container11">
+        <div style="order: 3">1</div>
+        <div style="order: 2">2</div>
+        <div style="order: 4">3</div> 
+        <div style="order: 1">4</div>
+    </div>
+
+    <h1>The flex-grow Property</h1>
+
+    <p>Make the third flex item grow eight times faster than the other flex items:</p>
+
+    <div class="flex-container12">
+            <div style="flex-grow: 1">1</div>
+            <div style="flex-grow: 1">2</div>
+            <div style="flex-grow: 8">3</div>
+    </div>
+
+    
+    <h1>The flex-shrink Property</h1>
+
+    <p>Do not let the third flex item shrink as much as the other flex items:</p>
+
+    <div class="flex-container13">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-shrink: 10 ">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+
+    
+    <h1>The flex-basis Property</h1>
+
+    <p>Set the initial length of the third flex item to 200 pixels:</p>
+
+    <div class="flex-container14">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-basis:200px">3</div>
+        <div>4</div>
+    </div>
+
+    
+    <h1>The flex Property</h1>
+
+    <p>Make the third flex item not growable (0), not shrinkable (0), and with an initial length of 200 pixels:</p>
+
+    <div class="flex-container15">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex: 0 0 200px">3</div>
+        <div>4</div>
+    </div>
+
+    <h1>The align-self Property</h1>
+
+    <p>The "align-self: center;" aligns the selected flex item in the middle of the container:</p>
+
+    <div class="flex-container16">
+        <div>1</div>
+        <div style="align-self: flex-start">2</div>
+        <div style="align-self: center">3</div>
+        <div style="align-self: flex-end">4</div>
+    </div>
+
+    <p>The align-self property overrides the align-items property of the container.</p>
+
+</body>
+</html>

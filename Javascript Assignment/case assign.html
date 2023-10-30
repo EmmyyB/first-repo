@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Assignment</title>
+</head>
+<body>
+    <script>
+        const q3 = prompt("What is the capital of Russia")
+
+        switch(q3){
+            case "Moscow":
+            q3_score = 4
+            break
+            default:
+            q3_score = 0
+        }
+
+        const q4 = prompt("What is the capital of The United State Of America")
+
+        switch(q4){
+            case "Washington DC":
+            q4_score = 5
+            break
+            default:
+            q3_score = 0
+        }
+
+        const q5 = prompt("What is the capital of France")
+
+        switch(q5){
+            case "Paris":
+            q3_score = 7
+            break
+            default:
+            q5_score = 0
+        }
+
+        const q6 = prompt("What is the capital of Canada")
+
+        switch(q6){
+            case "Ottawa":
+            q6_score = 2
+            break
+            default:
+            q6_score = 0
+        }
+
+        const q7 = prompt("What is the capital of India")
+
+        switch(q7){
+            case "New Delhi":
+            q7_score = 1
+            break
+            default:
+            q7_score = 0
+        }
+
+        const q8 = prompt("What is the capital of Spain")
+
+        switch(q8){
+            case "Madrid":
+            q8_score = 4
+            break
+            default:
+            q8_score = 0
+        }
+
+        const q9 = prompt("What is the capital of UAE")
+
+        switch(q9){
+            case "Dubai":
+            q9_score = 9
+            break
+            default:
+            q9_score = 0
+        }
+
+        const q10 = prompt("What is the capital of United Kingdom")
+
+        switch(q10){
+            case "London":
+            q10_score = 6
+            break
+            default:
+            q10_score = 0
+        }
+
+        total = q3_score + q4_score + q5_score + q6_score + q7_score + q8_score + q9_score + q10_score
+
+        if(total == 5){
+            grade = "A"
+        }
+        else if(total == 4){
+            grade = "B"
+        }
+        else if(total == 3){
+            grade = "C"
+        }
+        else if(total == 2){
+            grade = "D"
+        }
+        else if(total == 1){
+            grade = "E"
+        }
+        else{
+            grade = "F"
+        }
+        document.write("Your total score is " + total + " and your grade is "+ grade)
+
+    </script>
+</body>
+</html>

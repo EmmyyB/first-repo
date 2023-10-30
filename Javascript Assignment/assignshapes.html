@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="100"></canvas>
+    <!-- <input type="submit" value="Prev" onclick="prevBtn()">
+    <input type="submit" value="Next" onclick="nextBtn()"> -->
+    <article class="shape_container">
+        <div id="shapes"></div>
+        <h3 id="shape_name"></h3>
+    </article>
+
+    <button class="prev-btn">Previous</button>
+    <button class="next-btn">Next</button>
+    <script>
+        const canvas = document.getElementById('canvas')
+
+        //An array to store the drawing functions for each shape
+
+        //Drawing a Rectangle 
+        const content = canvas.getContext('2d')
+        content.beginPath()
+        content.fillStyle = "Crimson"
+        content.fillRect(50, 0, 400, 100)
+
+        //Drawing a line
+        const line = canvas.getContext('2d')
+        line.beginPath()
+        line.moveTo(30, 30) 
+        line.lineTo(200, 100)
+        line.strokeStyle = "black"
+        //line.stroke()
+
+        //Drawing a circle
+        const circleshape = canvas.getContext("2d")
+        circleshape.beginPath()
+        circleshape.arc(90, 70, 60, 0, 2*Math.PI)
+        circleshape.fillStyle = 'orange'
+        circleshape.strokeStyle = 'green'
+        //circleshape.fill()
+        //circleshape.stroke()
+
+        //Drawing a Triangle
+        const trishape = canvas.getContext("2d")
+        trishape.beginPath()
+
+        trishape.lineTo(20, 100)
+        trishape.lineTo(90, 20)
+        trishape.lineTo(190, 110)
+        trishape.lineTo(20, 100)
+        trishape.fillStyle = 'yellow'
+        trishape.strokeStyle = 'purple'
+        //trishape.fill()
+        //trishape.stroke()
+
+        //Drawing Trapezium
+        const trapshape = canvas.getContext("2d")
+        trapshape.beginPath()
+        trapshape.moveTo(20, 20)
+        trapshape.lineTo(100, 20)
+        trapshape.lineTo(175,100)
+        trapshape.lineTo(20, 100)
+        trapshape.lineTo(20, 20)
+        trapshape.strokeStyle = 'Blue'
+        trapshape.fillStyle = 'Gold'
+        //trapshape.stroke()
+        //trapshape.fill()
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Alert</title>
+</head>
+<body>
+    <script>
+        /*
+        const info = prompt("provide your information")
+        alert(info) ("Welcome to Javascript")
+        //code for cinditional statement
+        /*
+        const age = 19
+        if (age >= 19){
+            document.write("You can vote")
+        }
+        else{
+            document.write("You cannot vote")  //typically it is used to create an if else statement
+        }
+        /*
+        //if-else-if
+        const age = 20
+        if(age >= 18){
+            document.write("are in higher institution") 
+        }  
+        else if(age >=11){
+            document.write("You are in secondary school") 
+        }
+        else{
+            document.write("You are in primary school")
+        }
+        */
+        /*
+        const score = 32
+        if ((score >= 70) || (score <=100)){
+            document.write("A")
+        }
+        else if((score >= 60) && (score <=69)){
+            document.write("B")
+        }
+        else if((score >= 50) && (score <=59)){
+            document.write("C")
+        }
+        else if((score >= 45) && (score <= 49)){
+            document.write("D")
+        }
+        else if((score >= 30) && (score <= 39)){
+            document.write("E")
+        }
+        else{
+            document.write("F")
+        }
+        */
+
+       
+        const dial = prompt(" Dial *312#") 
+        if (dial === '*312#'){
+            alert("Welcome to MTN Network, Dial \n 1. Data Plan \n 2. Airtime \n 3. Check your Balance \n 4. Data Bundle \n 5. Customer Care")
+
+            var record = prompt("Enter a number")
+
+            if(record == 1){
+                alert("Buy Data, Dial \n 1. 100 for 100MB \n 2. 200 for 250MB \n 3. 400 for 500MB \n 4. 500 for 1.5GB")
+
+                var Data = prompt("Enter a number")
+                if (Data == '1'){
+                    document.write("Your account has been credited with 100MB")                }
+                }
+                if (Data == '2'){
+                    document.write("Your account has been credited with 250MB")
+                }
+                 if (Data == "3"){
+                    document.write("Your account has been credited with 500MB")
+                }
+                if (Data == '4'){
+                    document.write("Your account has been credited with 1.5GB")
+                }
+                else{
+                    document.write("You have entered a wrong number")
+                }
+            }
+
+            else{
+                alert("Wrong Input")
+            }
+       
+    </script>
+</body>
+</html>

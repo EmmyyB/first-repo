@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show IP Address</title>
+</head>
+<body>
+    <p>Click the button to display the host name and port number of the current URL.</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="info"></p>
+
+    <p>Click the button to display the entire URL of the current page.</p>
+    <button onclick="myhref()">Try it</button>
+    <p id="more"></p>
+
+    <script>
+        function myFunction() {
+            //this specifies the host name: port portion of the url (shows the IP Address)
+            var x = location.host 
+            document.getElementById("info").innerHTML = x
+        }
+
+        //to lunch you to a new page using URL 
+        function myhref() {
+            document.write("You are leaving this page to the home page")
+            location.href = "Show&Hide.html"
+        }
+    </script>
+</body>
+</html>

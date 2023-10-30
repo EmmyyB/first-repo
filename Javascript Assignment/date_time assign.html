@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <div></div>
+    <script type="text/Javascript">
+        /*
+        function clock() {
+            var time = new Date()
+            var hours = time.getHours()
+            var minutes = time.getMinutes()
+            var sec = time.getSeconds()
+            //var milli = time.getMilliseconds()
+            const container = document.querySelector('div')
+            var newHour = hours <= 12?hours:hours-12
+            var hr = newHour <= 9?"0" + newHour:newHour
+            var newMin = minutes <= 9?"0" + minutes:minutes
+            var newSec = sec <= 9?"0" + sec:sec
+            var ampm = hours >= 12? 'pm':'am'
+            res = hr + ':' + newMin + ':' + newSec + ampm
+            container.innerHTML = res
+        }
+        setInterval(clock, 1000)
+        */
+
+        function Dates() {
+            var date = new Date()
+            var day = date.getDay()
+            var newDate = date.getDate()
+            var year = date.getFullYear()
+            var month = date.getMonth()
+            const container = document.querySelector('div')
+            var newMonth = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            var dw = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+            var newDates = newDate == (1,21,31)?newDate + 'st':newDate==(2,22)?newDate + 'nd' :newDate == (3,23)?newDate + 'nd':newDate'th'
+            //newDates = newDate == (2,22)?newDate + 'nd':newDate + 'th'
+           // newDates = newDate == (3,23)?newDate + 'rd':newDate + 'th'
+            res = newDates + ' ' + dw[day] + ' ' + newMonth[month] + ' ' + year
+            container.innerHTML = res
+        }
+        setInterval(Dates)
+    </script>
+</body>
+</html>

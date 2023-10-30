@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <input type="text" class="First" placeholder="Enter first number" name="first">
+    <input type="text" class="Second" placeholder="Enter second number" name="second">
+    <input type="Submit" value="Submit" onclick="display()">
+    <script>
+        //function display() {
+          //  alert("Barbie")
+        //}
+
+        function display() {
+            const First = document.querySelector('.First')
+            const Second = document.querySelector('.Second')
+            alert(+(First.value)+ +(Second.value))
+            First.value = ''
+            Second.value = ''
+        }
+        
+    </script>
+    <!-- onclick is an event that you pass inside an attribute
+    Note what you pass inside an onclick is a function -->
+</body>
+</html>

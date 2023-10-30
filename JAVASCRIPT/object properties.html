@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Properties</title>
+</head>
+<body>
+    <script>
+        /*
+        const car = {
+            'Id' : 100,
+            'Name' : 'Benz',
+            'Price' : 20000000000
+        }
+        document.write(car['Price'])
+        */
+
+        //This is to give you with the name of the car
+        /*
+        const car = {
+            'Id' : 100,
+            'Name' : 'Benz',
+            'Price' : 20000000000
+        }
+        document.write(car['Name'] + " will cost you " + car['Price'])
+        */
+
+        //To list more than one car
+        /*
+        const car = [
+        {
+           'Id' : 100,
+            'Name' : 'Benz',
+            'Price' : 20000000000 
+        },
+                                            //And it's gonna bring out only lexus
+        {
+            'Id' : 101,
+            'Name' : 'Lexus',
+            'Price' : 20000000000
+        },
+
+        {
+            'Id' : 102,
+            'Name' : 'Benz',
+            'Price' : 20000000000
+        }
+        ]
+        document.write(car[1]['Name'])
+        */
+
+        /*
+        const car = [
+        {
+           'Id' : 100,
+            'Name' : 'Benz',
+            'Price' : 20000000000,
+            'Features' : ['Black', 2023, 'GLE 63'] 
+        },
+                                        
+        {
+            'Id' : 101,
+            'Name' : 'Lexus',
+            'Price' : 4000000000,
+            'Features' : ['Black', 2023, 'RX 350']
+        },
+
+        {
+            'Id' : 102,
+            'Name' : 'Rolls Royces',
+            'Price' : 1000000000
+        }
+        ]
+        document.write(car[1]['Features'][2])  //This is to bring only the year
+        */
+
+        const car = [
+        {
+           'Id' : 100,
+            'Name' : 'Benz',
+            'Price' : 60000000000, 
+            'Features' : ['White', 2023, 'GLE 63']
+        },
+                                            
+        {
+            'Id' : 101,
+            'Name' : 'Lexus',
+            'Price' : 20000000000,
+            'Features' : ['Black', 2022, 'RX 350']
+        },
+
+        {
+            'Id' : 102,
+            'Name' : 'Bugatti',
+            'Price' : 9000000000000,
+            //'Features' : ['Black', 2023, ]
+        }
+        ]
+        /*
+        for(var i = 0; i < 2; i++) {
+            console.log(car[i])
+            //console.log(i)
+        }
+        */
+        /*
+        for(var i = 0; i < 2; i++) {
+            console.log(car[i]['Name'])
+        }
+        */
+        /*
+        for(var i = 0; i < 2; i++) {
+            console.log(car[i]['Features'][i])
+        }
+        */
+        //forEach is used to read content in an array
+        score = [90, 40, 21]
+        score.forEach(s => {
+            console.log(s)
+        })
+
+        for(var i = 0; i < 2; i++) {
+            Features = car[i]['Features']
+            Features.forEach(f => {
+                console.log(f) 
+            })
+        }  
+    </script>
+</body>
+</html>

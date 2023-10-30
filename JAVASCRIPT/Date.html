@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        //var date = Date()
+        //document.write(date)
+        /*
+        var date = new Date()
+        var day = date.getDay()
+        document.write(day)
+
+        //DATE
+        var date = new Date()
+        var day = date.getDay()
+        var newDate = date.getDate()
+        document.write(date)
+
+        //YEAR
+        var date = new Date()
+        var day = date.getDay()
+        var newDate = date.getDate()
+        var year = date.getFullYear()
+        document.write(year)
+
+        //MONTH
+        var date = new Date()
+        var day = date.getDay()
+        var newDate = date.getDate()
+        var year = date.getFullYear|()
+        var month = date.getMonth()
+        document.write(month)
+        */
+        
+        
+
+        /*
+        var date = new Date()
+        var day = date.getDay()
+        var newDate = date.getDate()
+        var year = date.getFullYear()
+        var month = date.getMonth()
+        var newMonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        var dw = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+        document.write(`${dw[day]} ${newMonth[month]} ${year}`)
+        */
+        //var date = new Date()
+        //document.write(date)
+        /*
+        
+        //TIME
+        var time = new Date()
+        var hours = time.getHours()
+        var min = time.getMinutes()
+        var sec = time.getSeconds()
+        newHour = hours <= 12?hours:hours-12
+        document.write(newHour)
+
+        var ampm = hours >= 12?'pm':'am'
+        document.write(hours+':'+min+':'+sec+ ampm)
+
+        //FUNCTION
+        function clock() {
+        var time = new Date()
+        var hours = time.getHours()
+        var min = time.getMinutes()
+        var sec = time.getSeconds()
+        const div = document.querySelector('div')
+        newHour = hours <= 12?hours:hours-12
+
+        var ampm = hours >= 12?'pm':'am'
+        res = hours+':'+min+':'+sec+ ampm
+        div.innerHTML = res 
+    }
+    colck()
+        
+*/
+        function clock() {
+        var time = new Date()
+        var hours = time.getHours()
+        var min = time.getMinutes()
+        var sec = time.getSeconds()
+        const container = document.querySelector('div')
+        newHour = hours <= 12?hours:hours-12
+        
+        var ampm = hours >= 12?'pm':'am'
+        res = hours+':'+min+':'+sec+ ampm
+        container.innerHTML = res   
+        }
+        setInterval(clock, 1000);
+
+       /* var date = new Date()
+        var day = date.getDay()
+        var month = date.getMonth() 
+        var newMonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        // document.write(newMonth[month])
+        var newDay =  ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+        document.write(newDay[day])*/
+        
+
+
+    </script>
+</body>
+</html>

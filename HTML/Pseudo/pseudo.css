@@ -1,0 +1,87 @@
+/*unvisited link*/
+a:link {
+    color:red
+}
+
+/*visited link*/
+a:visited {
+    color:green
+}
+
+/*mouse over link*/
+a:hover {
+    color: hotpink;
+}
+
+/*selected link*/
+a:active {
+    color: blue;
+}
+
+a.highlight:hover {
+    color: #ff0000;
+    font-size: 40px;
+}
+
+.siuu {
+    background-color: green;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.siuu:hover {
+    background-color: blue;
+}
+
+#show {
+    display: none;
+    background-color: yellow;
+    padding: 20px;
+}
+
+.hide:hover #show {
+    display: block;
+}
+
+.dog:first-child {
+    color: blue;
+}
+
+.eat:first-child i {
+    color: blue;
+}
+
+.dogs::first-line {
+    color: #ff0000;
+    font-variant: small-caps;
+}
+
+.newspaper::first-letter {
+    color: #ff0000;
+    font-size: xx-large;
+}
+
+p.intro::first-letter {
+    color: #ff0000;
+    font: 200%;
+}
+
+.sugar::before {
+    content: url(/HTML/Niit/Images/WhatsApp\ Image\ 2023-03-28\ at\ 16.25.49.jpg);
+}
+
+.full::after {
+    content: url(/HTML/Niit/Images/WhatsApp\ Image\ 2023-03-28\ at\ 16.26.42.jpg);
+}
+
+::marker {
+    color: red;
+    font-size: 23px;
+}
+
+.sure::selection {
+    color: red;
+    background: yellow;
+}
+

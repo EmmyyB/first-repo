@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UFT-8">
+        <title>Loop</title>
+    </head>
+    <body>
+        <script>
+            //While loop
+            /*
+            var x = 1
+            while (x <= 9){
+                document.write(x)
+                x++
+                document.write("<br />")
+            }
+
+            //Even Number
+            var x = 1
+            while (x <= 9){
+                if (x % 2 == 0) {
+                 document.write(x)   
+                }
+                
+                x++
+                document.write("<br />")
+            }
+
+            //Odd Number
+            var x = 1
+            while (x <= 9){
+                if (x % 2 == 1){
+                 document.write(x)   
+                }
+                
+                x++
+                document.write("<br />")
+            }
+            
+            var answer = prompt("Are you at home?").toLowerCase();
+
+            while(answer.indexOf("yes") === -1){
+                var answer = prompt("Are you at home?").toLowerCase();
+            }
+            alert("Alright, i'm on my way... ")
+            
+
+            //For Loop
+            for(let j = 0; j<=10; j++){document.write
+            //("The following are your output:" +j + "<br .>")} OR //(`The following are your output: ${j}`+"<br />")
+            if(j % 2 == 0){
+                document.write(j)
+            }
+        }
+        */
+        for(let i = 1; i<=10; i++){
+            if(i == 5){
+                console.log("I am a five star player");
+                break
+            }
+            console.log(i)
+        }
+        
+        //For using Continue
+        for(var i = 1; i<=10; i++){
+            if(i == 5){
+                console.log("I am a five star player");
+                continue;
+            }
+            console.log(i)
+        }
+        
+        </script>
+    </body>
+</html>

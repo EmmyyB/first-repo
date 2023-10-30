@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show and hide Password</title>
+</head>
+<body>
+    <p>Click on the checkbox to show or hide password:</p>
+
+<label>Password</label>:
+<input type="password" value="" id="pwd"/>
+
+<input type="checkbox" id="check"/>
+<strong>Show Password</strong>
+
+<script>
+    //Change the type of input to password or text
+    const check = document.querySelector('#check')
+   
+    check.addEventListener('click', ()=> {
+        let pass = document.getElementById("pwd")
+        if (pass.type === "password") {
+            console.log(pass.type)
+            pass.type = "text"
+        }
+        else{
+            pass.type = "password"
+        }
+    })
+</script>
+</body>
+</html>

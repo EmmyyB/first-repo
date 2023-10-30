@@ -1,0 +1,102 @@
+#pineapple {
+    float: right;
+    width: 170px;
+    height: 170px;
+    margin-left: 15px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color:cyan;
+    text-align: center;
+    padding: 14px 136px;
+    text-decoration: none;
+}
+
+.active {
+    background-color: deeppink;
+}
+
+li a:hover {
+    background-color: #111;
+    text-decoration: underline;
+}
+
+.div1 {
+    float: left;
+    padding: 10px;
+    border: 3px solid #73AD21;
+}
+
+.div2 {
+    padding: 10px;
+    border: 3px solid red;
+}
+
+.div3 {
+    float: left;
+    padding: 10px;
+    border: 3px solid #73AD21;
+}
+
+.div4 {
+    clear: both;
+    padding: 10px;
+    border: 3px solid red
+}
+
+.out {
+    border: 3px solid #4CAF50;
+    padding: 5px;
+}
+
+.img1 {
+    float: right;
+}
+
+.img2 {
+    float: right;
+}
+
+.clearfix {
+    overflow: auto;
+    border: 3px solid #4CAF50;
+    padding: 5px;
+}
+
+* {
+   box-sizing: border-box; 
+}
+
+.box {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+    border: none;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: flex;
+}
+
+.img-container {
+    float: left;
+    width: 33.2%;
+    padding: 5px;
+    border: none;
+}

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid explanation</title>
+    <link rel="stylesheet" href="Grid.css">
+</head>
+<body>
+    
+<h1>Grid Layout</h1>
+
+<p>This grid layout contains six columns and three rows:</p>
+
+<div class="grid-container">
+  <div class="item1">Header</div>
+  <div class="item2">Menu</div>
+  <div class="item3">Main</div>  
+  <div class="item4">Right</div>
+  <div class="item5">Footer</div>
+</div>
+
+<p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p>
+
+<h1>Grid Elements</h1>
+
+<p>A Grid Layout must have a parent element with the <em>display</em> property set to <em>grid</em> or <em>inline-grid</em>.</p>
+
+<p>Direct child element(s) of the grid container automatically becomes grid items.</p>
+
+<div class="grid-container1">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>  
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>  
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>  
+</div>
+
+<p>The vertical lines of grid items are called columns.</p>
+<p>The horizontal lines of grid items are called rows.</p>
+<p>The spaces between each column/row are called gaps.column-gap, row-gap, gap</p>
+
+<h1>Grid Lines</h1>
+
+<div class="grid-container2">
+  <div class="item11">1</div>
+  <div class="item12">2</div>
+  <div class="item13">3</div>  
+  <div class="item14">4</div>
+  <div class="item15">5</div>
+  <div class="item16">6</div>
+  <div class="item17">7</div>
+  <div class="item18">8</div>  
+</div>
+
+<p>You can refer to line numbers when placing grid items.</p>
+
+<table class="ws-table-all notranslate" border="1">
+    <tbody><tr>
+      <th style="width:30%">Property</th>
+      <th>Description</th>
+    </tr>
+    <tr>    
+      <td>column-gap</td>
+      <td>Specifies the gap between the columns</td>
+    </tr>
+    <tr>
+      <td>gap</td>
+      <td>A shorthand property for the <em>row-gap</em> and the <em>column-gap</em> properties</td>
+    </tr>
+    <tr>
+      <td>grid</td>
+      <td>A shorthand property for the <em>grid-template-rows, 
+      grid-template-columns, grid-template-areas, grid-auto-rows, 
+      grid-auto-columns</em>, and the <em>grid-auto-flow</em> properties</td>
+    </tr>
+    <tr>
+      <td>grid-area</td>
+      <td>Either specifies a name for the grid item, or this property is a shorthand property for the <em>grid-row-start</em>, <em>grid-column-start</em>, <em>grid-row-end</em>, and <em>grid-column-end</em> properties</td>
+    </tr>
+    <tr>
+      <td>grid-auto-columns</td>
+      <td>Specifies a default column size</td>
+    </tr>
+    <tr>
+      <td>grid-auto-flow</td>
+      <td>Specifies how auto-placed items are inserted in the grid</td>
+    </tr>
+    <tr>
+      <td>grid-auto-rows</td>
+      <td>Specifies a default row size</td>
+    </tr>
+    <tr>
+      <td>grid-column</td>
+      <td>A shorthand property for the <em>grid-column-start</em> and the <em>grid-column-end</em> properties</td>
+    </tr>
+    <tr>
+      <td>grid-column-end</td>
+      <td>Specifies where to end the grid item</td>
+    </tr>
+    <tr>
+      <td>grid-column-gap</td>
+      <td>Specifies the size of the gap between columns</td>
+    </tr>
+    <tr>
+      <td>grid-column-start</td>
+      <td>Specifies where to start the grid item</td>
+    </tr>
+    <tr>
+      <td>grid-gap</td>
+      <td>A shorthand property for the <em>grid-row-gap</em> and <em>grid-column-gap</em> properties</td>
+    </tr>
+    <tr>
+      <td>grid-row</td>
+      <td>A shorthand property for the <em>grid-row-start</em> and the <em>grid-row-end</em> properties</td>
+    </tr>
+    <tr>
+      <td>grid-row-end</td>
+      <td>Specifies where to end the grid item</td>
+    </tr>
+    <tr>
+      <td>grid-row-gap</td>
+      <td>Specifies the size of the gap between rows</td>
+    </tr>
+    <tr>
+      <td>grid-row-start</td>
+      <td>Specifies where to start the grid item</td>
+    </tr>
+    <tr>
+      <td>grid-template</td>
+      <td>A shorthand property for the <em>grid-template-rows</em>, <em>grid-template-columns</em> 
+      and <em>grid-areas</em> properties</td>
+    </tr>
+    <tr>
+      <td>grid-template-areas</td>
+      <td>Specifies how to display columns and rows, using named grid items</td>
+    </tr>
+    <tr>
+      <td>grid-template-columns</td>
+      <td>Specifies the size of the columns, and how many columns in a grid layout</td>
+    </tr>
+    <tr>
+      <td>grid-template-rows</td>
+      <td>Specifies the size of the rows in a grid layout</td>
+    </tr>
+    <tr>
+      <td>row-gap</td>
+      <td>Specifies the gap between the grid rows</td>
+    </tr>
+  </tbody></table>
+
+<h1>The grid-template-columns Property</h1>
+
+<p>You can use the <em>grid-template-columns</em> property to specify the number of columns in your grid layout.</p>
+
+<div class="grid-container3">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+</div>
+
+<h1>The grid-template-columns Property</h1>
+
+<p>Use the <em>grid-template-columns</em> property to specify the size of each column.</p>
+
+<div class="grid-container4">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+</div>
+
+
+<h1>The grid-template-rows Property</h1>
+
+<div class="grid-container5">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+<p>Use the <em>grid-template-rows</em> property to specify the size (height) of each row.</p>
+
+<h1>The column-gap Property</h1>
+
+<p>Use the <em>column-gap</em> property to adjust the space between the columns:</p>
+
+<div class="grid-container6">
+  <div class="grid-item1">1</div>
+  <div class="grid-item1">2</div>
+  <div class="grid-item1">3</div>  
+  <div class="grid-item1">4</div>
+  <div class="grid-item1">5</div>
+  <div class="grid-item1">6</div>  
+  <div class="grid-item1">7</div>
+  <div class="grid-item1">8</div>
+  <div class="grid-item1">9</div>  
+</div>
+
+<h1>The row-gap Property</h1>
+
+<p>Use the <em>row-gap</em> property to adjust the space between the rows:</p>
+
+<div class="grid-container7">
+  <div class="grid-item2">1</div>
+  <div class="grid-item2">2</div>
+  <div class="grid-item2">3</div>  
+  <div class="grid-item2">4</div>
+  <div class="grid-item2">5</div>
+  <div class="grid-item2">6</div>  
+  <div class="grid-item2">7</div>
+  <div class="grid-item2">8</div>
+  <div class="grid-item2">9</div>  
+</div>
+
+<h1>The gap Property</h1>
+
+<p>Use the <em>gap</em> shorthand property to adjust the space between the columns and rows.</p>
+
+<div class="grid-container8">
+  <div class="grid-item3">1</div>
+  <div class="grid-item3">2</div>
+  <div class="grid-item3">3</div>  
+  <div class="grid-item3">4</div>
+  <div class="grid-item3">5</div>
+  <div class="grid-item3">6</div>  
+  <div class="grid-item3">7</div>
+  <div class="grid-item3">8</div>
+  <div class="grid-item3">9</div>  
+</div>
+
+
+<h1>The gap Property:</h1>
+
+<p>Use the <em>gap</em> shorthand property to adjust the space between the columns and rows:</p>
+
+<div class="grid-container9">
+  <div class="grid-item4">1</div>
+  <div class="grid-item4">2</div>
+  <div class="grid-item4">3</div>  
+  <div class="grid-item4">4</div>
+  <div class="grid-item4">5</div>
+  <div class="grid-item4">6</div>  
+  <div class="grid-item4">7</div>
+  <div class="grid-item4">8</div>
+  <div class="grid-item4">9</div>  
+</div
+
+<h1>The grid-template-rows Property</h1>
+
+<div class="grid-container10">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+<p>Use the <em>grid-template-rows</em> property to specify the size (height) of each row.</p>
+
+
+<h1>The justify-content Property</h1>
+
+<p>Use the <em>justify-content</em> property to align the grid inside the container.</p>
+
+<p>The value "space-evenly" will give the columns equal amount of space between, and around them:</p>
+
+<div class="grid-container11">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+
+<h1>The align-content Property</h1>
+
+<p>Use the <em>align-content</em> property to vertically align the grid inside the container.</p>
+
+<p>The value "center" will align the rows in the middle of the container:</p>
+
+<div class="grid-container12">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+</div>
+
+
+<h1>The grid-column Property</h1>
+
+<p>Use the <em>grid-column</em> property to specify where to place an item.</p>
+<p>Item1 will start on column 1 and end before column 5:</p>
+
+<div class="grid-container13">
+  <div class="item111">1</div>
+  <div class="item222">2</div>
+  <div class="item333">3</div>  
+  <div class="item444">4</div>
+  <div class="item555">5</div>
+  <div class="item666">6</div>
+  <div class="item777">7</div>
+  <div class="item8888">8</div>  
+  <div class="item999">9</div>
+  <div class="item100">10</div>
+  <div class="item11111">11</div>
+  <div class="item122">12</div>
+  <div class="item133">13</div>
+  <div class="item1444">14</div>
+  <div class="item1555">15</div>
+</div>
+
+<h1>The grid-column Property</h1>
+
+<p>Use the <em>grid-column</em> property to specify where to place an item.</p>
+<p>Item2 will start on column line 2 and span 3 columns:</p>
+
+<div class="grid-container14">
+  <div class="item1222">1</div>
+  <div class="item22">2</div>
+  <div class="item32">3</div>  
+  <div class="item42">4</div>
+  <div class="item52">5</div>
+  <div class="item62">6</div>
+  <div class="item72">7</div>
+  <div class="item82">8</div>  
+  <div class="item92">9</div>
+  <div class="item102">10</div>
+  <div class="item112">11</div>
+  <div class="item123">12</div>
+  <div class="item132">13</div>
+  <div class="item142">14</div>
+  <div class="item152">15</div>
+  <div class="item162">16</div>
+</div>
+
+<h1>The grid-row Property</h1>
+
+<p>Use the <em>grid-row</em> property to specify where to place an item.</p>
+<p>Item1 will start on row-line 1 and end on row-line 4:</p>
+
+<div class="grid-container15">
+  <div class="item1111">1</div>
+  <div class="item23">2</div>
+  <div class="item33">3</div>  
+  <div class="item43">4</div>
+  <div class="item53">5</div>
+  <div class="item63">6</div>
+  <div class="item73">7</div>
+  <div class="item83">8</div>  
+  <div class="item93">9</div>
+  <div class="item103">10</div>
+  <div class="item113">11</div>
+  <div class="item123">12</div>
+  <div class="item133">13</div>
+  <div class="item143">14</div>
+  <div class="item153">15</div>
+  <div class="item163">16</div>
+</div>
+
+
+<h1>The grid-area Property</h1>
+
+<p>You can use the <em>grid-area</em> property to specify where to place an item.</p>
+
+<p>The syntax is:</p>
+<p>grid-row-start / grid-column-start / grid-row-end / grid-column-end.</p>
+
+<p>Item8 will start on row-line 1 and column-line 2, and end on row-line 5 column-line 6:</p>
+
+<div class="grid-container16">
+  <div class="item1232">1</div>
+  <div class="item24">2</div>
+  <div class="item34">3</div>  
+  <div class="item44">4</div>
+  <div class="item54">5</div>
+  <div class="item64">6</div>
+  <div class="item74">7</div>
+  <div class="item88">8</div>  
+  <div class="item94">9</div>
+  <div class="item104">10</div>
+  <div class="item114">11</div>
+  <div class="item124">12</div>
+  <div class="item134">13</div>
+  <div class="item144">14</div>
+  <div class="item154">15</div>
+</div>
+
+
+<h1>The grid-area Property</h1>
+
+<p>You can use the <em>grid-area</em> property to specify where to place an item.</p>
+
+<p>The syntax is grid-row-start / grid-column-start / grid-row-end / grid-column-end.</p>
+
+<p>Item8 will start on row-line 2 and column-line 1, and span 2 rows and 3 columns:</p>
+
+<div class="grid-container">
+  <div class="item1555">1</div>
+  <div class="item25">2</div>
+  <div class="item35">3</div>  
+  <div class="item45">4</div>
+  <div class="item55">5</div>
+  <div class="item65">6</div>
+  <div class="item75">7</div>
+  <div class="item888">8</div>  
+  <div class="item95">9</div>
+  <div class="item105">10</div>
+  <div class="item115">11</div>
+  <div class="item125">12</div>
+  <div class="item135">13</div>
+</div>
+</body>
+</html>
